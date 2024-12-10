@@ -1,14 +1,13 @@
 import React from "react";
 import { StyleSheet, View, Text, ActivityIndicator } from "react-native";
-import { Inter_400Regular } from '@expo-google-fonts/inter';
-import { Caveat_400Regular } from '@expo-google-fonts/caveat';
-import { useFonts } from 'expo-font'; 
+import { Inter_400Regular } from "@expo-google-fonts/inter";
+import { Caveat_700Bold } from "@expo-google-fonts/caveat";
+import { useFonts } from "expo-font";
 
 export default function SplashScreen() {
-
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
-    Caveat_400Regular,
+    Caveat_700Bold,
   });
 
   if (!fontsLoaded) {
@@ -20,7 +19,6 @@ export default function SplashScreen() {
       <Text style={styles.title}>Comot</Text>
       <Text style={styles.subtitle}>Your favourite Nigerian</Text>
       <Text style={styles.subtitle}>Pidgin library</Text>
-      <ActivityIndicator size="large" color="#008BFF" />
     </View>
   );
 }
@@ -37,12 +35,13 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#008BFF",
     marginBottom: 20,
-    fontFamily: 'Caveat_400Regular',
+    fontFamily: "Caveat_700Bold",
   },
   subtitle: {
     fontSize: 16,
     color: "#545353",
-    fontWeight: '400',
-    fontFamily: 'Inter_400Regular',
+    fontWeight: "400",
+    fontFamily: "Inter_400Regular",
+    lineHeight: 24,
   },
 });
