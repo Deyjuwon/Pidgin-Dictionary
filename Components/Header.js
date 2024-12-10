@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, TextInput, Image, ActivityIndicator  } from "re
 import { Inter_400Regular } from "@expo-google-fonts/inter";
 import { Caveat_400Regular } from "@expo-google-fonts/caveat";
 import { useFonts } from "expo-font";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 export default function Header() {
     const [fontsLoaded] = useFonts({
@@ -20,7 +21,8 @@ export default function Header() {
       {/* Top Section */}
       <View style={styles.headerTop}>
         <Text style={styles.greetingText}>Hi, Pidgin lover 👋</Text>
-        <Image style={styles.bellIcon} source={require("../assets/Vector.png")} />
+        {/* <Image style={styles.bellIcon} source={require("../assets/Vector.png")} /> */}
+        <Icon name="bell-o" size={18} color="#000" />
       </View>
 
       {/* Search Bar */}
