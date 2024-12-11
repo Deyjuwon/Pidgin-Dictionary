@@ -1,0 +1,26 @@
+export const Slangs = [
+    { id: 1, slang: "How far?", meaning: "How are you?"},
+    { id: 2, slang: "Japa", meaning: "To run away or escape"},
+    { id: 3, slang: "E choke", meaning: "That's impressive!" },
+    { id: 4, slang: "Kpele", meaning: "Sorry or take heart" },
+    { id: 5, slang: "Abi?", meaning: "Right? Isn't it?" },
+    { id: 6, slang: "How you dey?", meaning: "How are you?"},
+    { id: 7, slang: "You too much", meaning: "You are far too kind." },
+    { id: 8, slang: "I wan Chop / I dey H", meaning: "I want to eat" },
+    { id: 9, slang: "K-leg", meaning: "The situation or topic is either suspicious or untrue." },
+    { id: 10, slang: "E be like film", meaning: "This phrase is used to express incredulity, especially when reporting a scenario, movie or circumstance." },
+    { id: 11, slang: "Na so/Na so?", meaning: "This means 'It is so' or 'I concur/ is that so?" },
+    { id: 12, slang: "Notin Spoil", meaning: "This means all is well." },
+    { id: 13, slang: "Gbam!", meaning: "This is a response that means exactly or precisely." },
+    { id: 14, slang: "Abeg", meaning: "This simply means 'Please.' " },
+    { id: 15, slang: "I no get", meaning: "I dont have it" },
+    { id: 16, slang: "Go Slow", meaning: "This means 'Traffic Jam.’ " },
+    { id: 17, slang: "Comot", meaning: "This could mean 'go', 'leave', or 'get out!'" },
+    { id: 18, slang: "Dey", meaning: "This is the pidgin form of the verb 'to be'." },
+    { id: 19, slang: "Wetin?", meaning: "This means 'What?'" },
+    { id: 20, slang: "I Sabi", meaning: "'I know', or 'I understand.'" },
+    { id: 21, slang: "Wahala", meaning: "This means 'Trouble'" },
+    { id: 22, slang: "God don butter my bread", meaning: "God has answered my prayers." },
+
+  ];
+
