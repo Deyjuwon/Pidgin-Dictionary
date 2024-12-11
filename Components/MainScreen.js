@@ -1,8 +1,7 @@
-import React from "react";
-import { StyleSheet, SafeAreaView, SectionList, Text, View } from "react-native";
+import React, { useState } from "react";
+import { StyleSheet, SafeAreaView, SectionList, Text, View, TouchableOpacity } from "react-native";
 import Header from "./Header";
 import { Slangs } from "../data";
-
 
 // Grouping Slangs by First Letter
 const groupSlangsByLetter = (slangs) => {
@@ -17,6 +16,8 @@ const groupSlangsByLetter = (slangs) => {
 };
 
 export default function MainScreen() {
+  const [expandedId, setExpandedId] = useState(null); // Track the currently expanded slang's id
+
   const groupedSlangs = groupSlangsByLetter(Slangs);
 
   // Convert grouped data into SectionList format
@@ -27,6 +28,11 @@ export default function MainScreen() {
       data: groupedSlangs[key],
     }));
 
+  // Handle toggle for displaying the meaning
+  const toggleMeaning = (id) => {
+    setExpandedId((prev) => (prev === id ? null : id)); // If the same ID is clicked, close it; otherwise, open it
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <Header />
@@ -36,8 +42,12 @@ export default function MainScreen() {
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <View style={styles.itemContainer}>
-            <Text style={styles.slang}>{item.slang}</Text>
-            <Text style={styles.meaning}>{item.meaning}</Text>
+            <TouchableOpacity onPress={() => toggleMeaning(item.id)}>
+              <Text style={styles.slang}>{item.slang}</Text>
+            </TouchableOpacity>
+            {expandedId === item.id && ( // Show meaning only if the slang's ID matches the expandedId
+              <Text style={styles.meaning}>{item.meaning}</Text>
+            )}
           </View>
         )}
         renderSectionHeader={({ section: { title } }) => (
@@ -54,6 +64,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     width: "100%",
   },
+
   sectionHeader: {
     fontSize: 32,
     paddingHorizontal: 25,
@@ -69,8 +80,6 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     borderBottomWidth: 1,
     borderBottomColor: "#e0e0e0",
-    
-    
   },
   slang: {
     fontSize: 16,
