@@ -32,6 +32,7 @@ export default function MainScreen() {
       <Header />
       <SectionList
         sections={sections}
+        style={styles.mainContainer}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <View style={styles.itemContainer}>
@@ -54,18 +55,22 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   sectionHeader: {
-    fontSize: 20,
-    fontWeight: "bold",
-    backgroundColor: "#f7f7f7",
-    paddingHorizontal: 10,
-    paddingVertical: 5,
+    fontSize: 32,
+    paddingHorizontal: 25,
+    paddingVertical: 10,
     color: "#333",
+    fontStyle: "italic",
+    textAlign: "right",
+    width: "100%",
+    backgroundColor: "#fff",
   },
   itemContainer: {
-    paddingHorizontal: 15,
-    paddingVertical: 10,
+    paddingHorizontal: 25,
+    paddingVertical: 15,
     borderBottomWidth: 1,
     borderBottomColor: "#e0e0e0",
+    
+    
   },
   slang: {
     fontSize: 16,
@@ -74,6 +79,7 @@ const styles = StyleSheet.create({
   },
   meaning: {
     fontSize: 14,
-    color: "#555",
+    color: "#008bff",
+    paddingTop: 10,
   },
 });

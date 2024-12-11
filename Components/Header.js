@@ -43,7 +43,8 @@ const styles = StyleSheet.create({
   header: {
     width: "100%",
     paddingHorizontal: 20,
-    paddingTop: 20, // Add padding for space below the status bar
+    paddingTop: 20,
+    paddingBottom: 20, // Add padding for space below the status bar
     fontFamily: "Inter_400Regular", 
   },
   headerTop: {
