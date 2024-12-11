@@ -8,11 +8,17 @@ import {
   ActivityIndicator,
   FlatList,
 } from "react-native";
+
+// IMPORT FONTS
 import { Inter_400Regular } from "@expo-google-fonts/inter";
 import { Caveat_400Regular } from "@expo-google-fonts/caveat";
 import { useFonts } from "expo-font";
+
+// IMPORT ICON
 import Icon from "react-native-vector-icons/FontAwesome";
-import { Slangs } from "../data"; // Import the slangs data
+
+// DATA FETCH
+import { Slangs } from "../data";
 
 export default function Header() {
   const [fontsLoaded] = useFonts({
@@ -20,30 +26,30 @@ export default function Header() {
     Caveat_400Regular,
   });
 
-  const [searchTerm, setSearchTerm] = useState(""); // State for search input
-  const [filteredSlangs, setFilteredSlangs] = useState([]); // Initially empty list
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredSlangs, setFilteredSlangs] = useState([]);
 
-  // Handle search functionality
+  // SEARCH FUNCTIONALITY
   const handleSearch = (text) => {
-    setSearchTerm(text); // Update search term
+    setSearchTerm(text);
     if (text.trim() === "") {
-      setFilteredSlangs([]); // Clear the list if input is empty
+      setFilteredSlangs([]);
     } else {
-      const filtered = Slangs.filter((slang) =>
-        slang.slang.toLowerCase().includes(text.toLowerCase()) ||
-        slang.meaning.toLowerCase().includes(text.toLowerCase())
+      const filtered = Slangs.filter(
+        (slang) =>
+          slang.slang.toLowerCase().includes(text.toLowerCase()) ||
+          slang.meaning.toLowerCase().includes(text.toLowerCase())
       );
-      setFilteredSlangs(filtered); // Update filtered results
+      setFilteredSlangs(filtered);
     }
   };
 
-  // Function to highlight the matching text
   const getHighlightedText = (text, searchTerm) => {
     if (!searchTerm.trim()) {
       return <Text style={styles.normalText}>{text}</Text>;
     }
 
-    const parts = text.split(new RegExp(`(${searchTerm})`, "gi")); // Split the text into parts
+    const parts = text.split(new RegExp(`(${searchTerm})`, "gi"));
     return parts.map((part, index) =>
       part.toLowerCase() === searchTerm.toLowerCase() ? (
         <Text key={index} style={styles.highlightedText}>
@@ -63,13 +69,10 @@ export default function Header() {
 
   return (
     <View style={styles.header}>
-      {/* Top Section */}
       <View style={styles.headerTop}>
         <Text style={styles.greetingText}>Hi, Pidgin lover 👋</Text>
         <Icon name="bell-o" size={18} color="#000" />
       </View>
-
-      {/* Search Bar */}
       <View style={styles.searchBar}>
         <Image
           style={styles.searchIcon}
@@ -80,22 +83,20 @@ export default function Header() {
           placeholder="Search"
           placeholderTextColor="#888"
           value={searchTerm}
-          onChangeText={handleSearch} // Handle search input
+          onChangeText={handleSearch}
         />
       </View>
 
-      {/* Display only if there's a search term */}
+      {/* SEARCH RESULT */}
       {searchTerm.trim() !== "" && (
         <FlatList
-          data={filteredSlangs} // Filtered list of slangs
+          data={filteredSlangs}
           keyExtractor={(item) => item.id.toString()}
           renderItem={({ item }) => (
             <View style={styles.itemContainer}>
-              {/* Highlighted Slang */}
               <Text style={styles.slang}>
                 {getHighlightedText(item.slang, searchTerm)}
               </Text>
-              {/* Highlighted Meaning */}
               <Text style={styles.meaning}>
                 {getHighlightedText(item.meaning, searchTerm)}
               </Text>
@@ -110,12 +111,13 @@ export default function Header() {
   );
 }
 
+// STYLING
 const styles = StyleSheet.create({
   header: {
     width: "100%",
     paddingHorizontal: 20,
     paddingTop: 20,
-    paddingBottom: 20, // Add padding for space below the status bar
+    paddingBottom: 20,
     fontFamily: "Inter_400Regular",
   },
   headerTop: {
@@ -183,7 +185,7 @@ const styles = StyleSheet.create({
     color: "#000",
   },
   highlightedText: {
-    color: "#008bff", // Highlight color (you can change this)
+    color: "#008bff",
     fontWeight: "bold",
   },
 });

@@ -1,9 +1,18 @@
 import React, { useState } from "react";
-import { StyleSheet, SafeAreaView, SectionList, Text, View, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  SafeAreaView,
+  SectionList,
+  Text,
+  View,
+  TouchableOpacity,
+} from "react-native";
 import Header from "./Header";
+
+// DATA FETCH
 import { Slangs } from "../data";
 
-// Grouping Slangs by First Letter
+// DATA GROUPING
 const groupSlangsByLetter = (slangs) => {
   return slangs.reduce((acc, item) => {
     const firstLetter = item.slang[0].toUpperCase();
@@ -16,21 +25,20 @@ const groupSlangsByLetter = (slangs) => {
 };
 
 export default function MainScreen() {
-  const [expandedId, setExpandedId] = useState(null); // Track the currently expanded slang's id
+  const [expandedId, setExpandedId] = useState(null);
 
   const groupedSlangs = groupSlangsByLetter(Slangs);
 
-  // Convert grouped data into SectionList format
+  // ARRAY SORTING
   const sections = Object.keys(groupedSlangs)
-    .sort() // Sort alphabetically
+    .sort()
     .map((key) => ({
       title: key,
       data: groupedSlangs[key],
     }));
 
-  // Handle toggle for displaying the meaning
   const toggleMeaning = (id) => {
-    setExpandedId((prev) => (prev === id ? null : id)); // If the same ID is clicked, close it; otherwise, open it
+    setExpandedId((prev) => (prev === id ? null : id));
   };
 
   return (
@@ -45,7 +53,9 @@ export default function MainScreen() {
             <TouchableOpacity onPress={() => toggleMeaning(item.id)}>
               <Text style={styles.slang}>{item.slang}</Text>
             </TouchableOpacity>
-            {expandedId === item.id && ( // Show meaning only if the slang's ID matches the expandedId
+
+            {/* DROPDOWN */}
+            {expandedId === item.id && (
               <Text style={styles.meaning}>{item.meaning}</Text>
             )}
           </View>
@@ -58,6 +68,7 @@ export default function MainScreen() {
   );
 }
 
+// STYLING
 const styles = StyleSheet.create({
   container: {
     flex: 1,
