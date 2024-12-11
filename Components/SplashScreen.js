@@ -1,5 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text, ActivityIndicator } from "react-native";
+
+// IMPORT FONTS
 import { Inter_400Regular } from "@expo-google-fonts/inter";
 import { Caveat_700Bold } from "@expo-google-fonts/caveat";
 import { useFonts } from "expo-font";
@@ -23,6 +25,7 @@ export default function SplashScreen() {
   );
 }
 
+//STYLING
 const styles = StyleSheet.create({
   container: {
     flex: 1,
