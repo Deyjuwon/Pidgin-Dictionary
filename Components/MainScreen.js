@@ -20,9 +20,13 @@ const groupSlangsByLetter = (slangs) => {
       acc[firstLetter] = [];
     }
     acc[firstLetter].push(item);
+
+    // Sort the array alphabetically by the slang term
+    acc[firstLetter].sort((a, b) => a.slang.localeCompare(b.slang));
     return acc;
   }, {});
 };
+
 
 export default function MainScreen() {
   const [expandedId, setExpandedId] = useState(null);
