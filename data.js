@@ -142,7 +142,12 @@ export const Slangs = [
     { id: 147, slang: "Dem don cast", meaning: "They’ve been exposed." },
     { id: 148, slang: "Chook hand", meaning: "Put your hand in (literally or figuratively)." },
     { id: 149, slang: "Borrow pose", meaning: "Fake confidence or act important." },
-    { id: 150, slang: "I dey kampe", meaning: "I’m fine / I’m good." },
+    { id: 150, slang: "Agbada", meaning: "Large traditional garment usually worn by men over a shirt." },
+    { id: 151, slang: "Bobbi", meaning: "Breast." },
+    { id: 152, slang: "Mamaput", meaning: "Roadside restaurant." },
+    { id: 153, slang: "Butta my bread", meaning: "Answered prayer." },
+    { id: 154, slang: "Dada", meaning: "Dread locks." },
+    { id: 155, slang: "Gallop", meaning: "Pot holes in road." },
 
 
 

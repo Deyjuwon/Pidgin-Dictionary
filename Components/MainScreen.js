@@ -21,7 +21,7 @@ const groupSlangsByLetter = (slangs) => {
     }
     acc[firstLetter].push(item);
 
-    // Sort the array alphabetically by the slang term
+    // Sort the array alphabetically
     acc[firstLetter].sort((a, b) => a.slang.localeCompare(b.slang));
     return acc;
   }, {});
