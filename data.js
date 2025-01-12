@@ -148,6 +148,12 @@ export const Slangs = [
     { id: 153, slang: "Butta my bread", meaning: "Answered prayer." },
     { id: 154, slang: "Dada", meaning: "Dread locks." },
     { id: 155, slang: "Gallop", meaning: "Pot holes in road." },
+    { id: 156, slang: "Awoof", meaning: "Freebie. Without charge." },
+    { id: 157, slang: "Yab", meaning: "Abuse or make fun of." },
+    { id: 158, slang: "Yafu yafu", meaning: "Plenty" },
+    { id: 159, slang: "Winch", meaning: "Witch." },
+    { id: 160, slang: "Throway salute", meaning: "Big shout out to." },
+    { id: 160, slang: "Throway face", meaning: "Avoid eye contact or snub" },
 
 
 
