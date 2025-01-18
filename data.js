@@ -154,7 +154,7 @@ export const Slangs = [
     { id: 158, slang: "Yafu yafu", meaning: "Plenty" },
     { id: 159, slang: "Winch", meaning: "Witch." },
     { id: 160, slang: "Throway salute", meaning: "Big shout out to." },
-    { id: 160, slang: "Throway face", meaning: "Avoid eye contact or snub" },
+    { id: 161, slang: "Throway face", meaning: "Avoid eye contact or snub" },
 
 
 
