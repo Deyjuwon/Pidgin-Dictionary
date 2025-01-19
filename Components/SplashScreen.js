@@ -18,7 +18,7 @@ export default function SplashScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Pigeonary</Text>
+      <Text style={styles.title}>Pidgin</Text>
       <Text style={styles.subtitle}>Your favourite Nigerian</Text>
       <Text style={styles.subtitle}>Pidgin library</Text>
     </View>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   title: {
-    fontSize: 52,
+    fontSize: 58,
     fontWeight: "bold",
     color: "#008BFF",
     marginBottom: 20,
