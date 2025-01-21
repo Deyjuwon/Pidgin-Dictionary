@@ -155,6 +155,13 @@ export const Slangs = [
     { id: 159, slang: "Winch", meaning: "Witch." },
     { id: 160, slang: "Throway salute", meaning: "Big shout out to." },
     { id: 161, slang: "Throway face", meaning: "Avoid eye contact or snub" },
+    { id: 162, slang: "Owambe", meaning: "Yoruba word meaning it is there, denoting a lavish party with live music." },
+    { id: 163, slang: "Paale", meaning: "Old man." },
+    { id: 164, slang: "Pangolo", meaning: "Tin can" },
+    { id: 165, slang: "Soja", meaning: "Soldier" },
+    { id: 166, slang: "Tolotolo", meaning: "Turkey" },
+
+    
 
 
 
