@@ -160,6 +160,9 @@ export const Slangs = [
     { id: 164, slang: "Pangolo", meaning: "Tin can" },
     { id: 165, slang: "Soja", meaning: "Soldier" },
     { id: 166, slang: "Tolotolo", meaning: "Turkey" },
+    { id: 166, slang: "Acata", meaning: "Someone that lives in UK or USA" },
+    { id: 166, slang: "Agbada", meaning: "Large traditional garment usually worn by men over a shirt." },
+    
 
     
 
