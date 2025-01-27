@@ -161,7 +161,10 @@ export const Slangs = [
     { id: 165, slang: "Soja", meaning: "Soldier" },
     { id: 166, slang: "Tolotolo", meaning: "Turkey" },
     { id: 166, slang: "Acata", meaning: "Someone that lives in UK or USA" },
-    { id: 166, slang: "Agbada", meaning: "Large traditional garment usually worn by men over a shirt." },
+    { id: 167, slang: "Agbada", meaning: "Large traditional garment usually worn by men over a shirt." },
+    { id: 168, slang: "Area boys", meaning: " Unemployed street-wise youth loitering in the neighbourhood. Also called 'Alaye boys' in Lagos." },
+    { id: 169, slang: "Apkroko", meaning: "Gossip" },
+    { id: 170, slang: "Chassis", meaning: "Brand new car" },
     
 
     
