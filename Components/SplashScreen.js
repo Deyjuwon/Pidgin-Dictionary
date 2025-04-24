@@ -18,7 +18,7 @@ export default function SplashScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Comot</Text>
+      <Text style={styles.title}>peegeen</Text>
       <Text style={styles.subtitle}>Your favourite Nigerian</Text>
       <Text style={styles.subtitle}>Pidgin library</Text>
     </View>
